@@ -227,7 +227,11 @@ section .title::after{
     border-radius: 6px;
 }
 /*  sessão serviços */
-.services, .teams{
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
     background: #2d3b50;
     color: #fff;
 }
@@ -238,41 +242,56 @@ section .title::after{
 .services .title::after,
 .teams .title::after{
     background: #2d3b50;
-    content: "Que oferecemos";
+    content: "em desenvolvimento";
 }
-.services .serv-content .card{
-    width: calc(33% - 20px);
+.services .serv-content .card {
+    width: calc(100% - 30px);
+    max-width: 600px; /* Define um limite máximo para o tamanho do card */
     background: #222;
     text-align: center;
     border-radius: 6px;
-    padding: 20px 25px;
+    padding: 30px 40px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+
+.services .serv-content .card-link {
+    text-decoration: none; /* Remove a sublinha do link */
+    color: inherit; /* Herda a cor do elemento pai */
+}
+.services .serv-content .card-link:visited {
+    color: inherit; 
+}
+
+.services .serv-content .card:hover {
     background: #5e94df;
 }
-.services .serv-content .card .box{
+
+.services .serv-content .card .box {
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+
+.services .serv-content .card:hover .box {
     transform: scale(1.05);
 }
-.services .serv-content .card ion-icon{
+
+.services .serv-content .card ion-icon {
     font-size: 70px;
     color: #5e94df;
 }
-.services .serv-content .card:hover ion-icon{
+
+.services .serv-content .card:hover ion-icon {
     color: #fff;
 }
-.services .serv-content .card .text{
+
+.services .serv-content .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
 /*  sessão especialidades  */
 .skills .title::after{
-    content: "Que faço";
+    content: "em desenvolvimento";
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
